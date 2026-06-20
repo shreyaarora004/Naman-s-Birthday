@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Naman 💖</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    overflow: hidden;
+    text-align: center;
+    color: #333;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+    color: #ff4d6d;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 85%;
+    max-width: 520px;
+    margin: 100px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9);}
+    to { opacity: 1; transform: scale(1);}
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background: #ff6b81;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff4757;
+}
+
+.hidden {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+h3 {
+    color: #ff4d6d;
+}
+
+/* Image styling */
+.photo {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+/* Map button */
+.map-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #2ed573;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+    <h2>Hey Naman 💖</h2>
+    <p>I have something important to ask you...</p>
+
+```
+<button onclick="start()">Click Me 😊</button>
+
+<div id="step1" class="hidden">
+    <p>Will you come meet me for your…</p>
+    <p><strong>COUNTING CLASSES? 😏📚</strong></p>
+    <button onclick="reveal()">Obviously Yes ❤️</button>
+</div>
+
+<div id="step2" class="hidden">
+    <p>I knew you'd say yes 😌</p>
+    <p><strong>Get ready…</strong></p>
+    <h3>🍣 Adrift Kaya, Aerocity ✨</h3>
+    <p>Dress nice… it's your birthday after all 💕</p>
+
+    <!-- Add your photo here -->
+    <img src="your-photo.jpg" class="photo" alt="Us 💖">
+
+    <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Adrift+Kaya+Aerocity" target="_blank">
+        📍 Open Location
+    </a>
+</div>
+```
+
+</div>
+
+<script>
+function start() {
+    document.getElementById("step1").style.display = "block";
+}
+
+function reveal() {
+    document.getElementById("step2").style.display = "block";
+}
+
+/* Floating hearts */
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+}, 400);
+</script>
+
+</body>
+</html>
