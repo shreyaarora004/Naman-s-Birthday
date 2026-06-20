@@ -41,6 +41,17 @@ button {
     display: none;
 }
 
+/* Location button */
+.map-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #2ed573;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
 /* Surprise popup */
 #surprise {
     position: fixed;
@@ -48,13 +59,13 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.9);
     color: white;
     display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: 30px;
+    font-size: 28px;
     z-index: 999;
     animation: zoom 0.6s ease;
 }
@@ -69,7 +80,6 @@ button {
     position: fixed;
     width: 10px;
     height: 10px;
-    background: red;
     top: -10px;
     animation: fall linear forwards;
 }
@@ -119,10 +129,17 @@ button {
 </div>
 
 <div id="step2" class="hidden">
-    <h3>🍣 Adrift Kaya ✨</h3>
+    <h3>🍣 Adrift Kaya, Aerocity ✨</h3>
     <p>Dress nice mister 😌</p>
 
-    <img src="your-photo.jpg.jpeg" class="photo">
+    <img src="your-photo.jpg.jpeg" class="photo" alt="Us 💖">
+
+    <!-- LOCATION BUTTON -->
+    <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Adrift+Kaya+Aerocity" target="_blank">
+        📍 Tap to see where you're going 😏
+    </a>
+
+    <br>
 
     <button onclick="party()">WAIT… WHAT? 😳</button>
 </div>
@@ -133,9 +150,9 @@ button {
 <!-- SURPRISE SCREEN -->
 
 <div id="surprise">
-    <h1>🎉 SURPRISE NAMAN!!! 🎂</h1>
+    <h1>🎉 NAMAN!!! 🎂</h1>
     <p>HAPPY BIRTHDAY JAANA 😭💖</p>
-    <p>Now get ready, we're going out 😏</p>
+    <p>Now get ready… you're being taken out 😏</p>
 </div>
 
 <script>
